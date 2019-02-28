@@ -3,8 +3,27 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
+  state = {
+    data: "loading..."
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData() {
+    //fetch("http://favor.ie.sogou.com/topNews");
+    fetch("/topNews")
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({ data: data.pic_news[0].title });
+      });
+  }
+
   render() {
-    let a = 1 + 1;
     return (
       <div className="App">
         <header className="App-header">
@@ -20,6 +39,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <div>proxy ：“{this.state.data}”</div>
         </header>
       </div>
     );

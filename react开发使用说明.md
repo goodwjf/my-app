@@ -30,14 +30,14 @@ npm start
 
 ```
 vscode 安装 VS Code - Debugger for Chrome
-浏览器安装 https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 插件
+chrome浏览器 安装 https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 插件
 ```
 
-### 3、自动格式化
+### 3、vscode 自动格式化
 
 Prettier formatter for Visual Studio Code
 
-### 4、api 代理
+### 4、开发环境中 api 代理 （解决跨越问题）
 
 ```
 package.json 中添加 proxy 字段，例如：
